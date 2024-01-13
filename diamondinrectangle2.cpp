@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     //pattern
     int n =5;
-    int space = 0;
+    int spaceIndex = n-1;
     int starsIndex = n; 
     
     for(int i=0;i<n;i++){
@@ -12,9 +12,9 @@ int main() {
         for(int j=1;j<=starsIndex;j++){
             cout<<"*";
         }
-        //print space;
-        for(int j=1; j<=space;j++){
-            cout<<" ";
+        //print spaceIndex;
+        for(int j=starsIndex+1; j<=spaceIndex;j++){
+            cout<<"-";
         }
          //print stars
         for(int j=1;j<=starsIndex;j++){
@@ -22,22 +22,22 @@ int main() {
             cout<<"*";
         }
 
-        space=(2*i +1);
+        spaceIndex++;
         starsIndex--;
         cout<<endl;
     }
 
      starsIndex =1;
-     space = (2n-1)-2;
+     spaceIndex = 2*n -2;
 
      for(int i=0;i<n;i++){
         //print starIndex
         for(int j=1;j<=starsIndex;j++){
             cout<<"*";
         }
-        //print space;
-        for(int j=1; j<=space;j++){
-            cout<<" ";
+        //print spaceIndex;
+        for(int j=starsIndex+1; j<=spaceIndex;j++){
+            cout<<"-";
         }
          //print stars
         for(int j=1;j<=starsIndex;j++){
@@ -45,7 +45,7 @@ int main() {
             cout<<"*";
         }
 
-        space-=2;
+        spaceIndex--;
         starsIndex++;
         cout<<endl;
     }
